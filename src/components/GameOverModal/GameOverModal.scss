@@ -1,0 +1,62 @@
+.game-over-modal {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: top 0.5s ease;
+}
+
+.game-over-modal.slide-in {
+  top: 0;
+}
+
+.game-over-modal.hidden {
+  display: none;
+}
+
+.game-over-content {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fade-in 0.3s ease-out;
+}
+
+.game-over-content h1 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.restart-button {
+  background-color: #6aaa64;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.restart-button:hover {
+  background-color: #57a151;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
